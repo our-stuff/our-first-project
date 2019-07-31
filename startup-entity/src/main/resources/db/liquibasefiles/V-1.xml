@@ -1,0 +1,74 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"
+	logicalFilePath="V-1.xml">
+	<changeSet id="first" author="kc04907@gmail.com">
+		<sql>SELECT 1</sql>
+	</changeSet>
+	<changeSet id="1" author="kc04907@gmail.com"
+		context="prod,test,stage">
+		<createTable tableName="user" schemaName="public">
+			<column name="id" type="INT" autoIncrement="true">
+				<constraints primaryKey="true"
+					primaryKeyName="user_id_pkey" nullable="false" />
+			</column>
+			
+			<column name="name" type="VARCHAR(30)">
+				<constraints nullable="true" />
+			</column>
+			
+			
+			<column name="dateofbirth" type="VARCHAR(30)">
+				<constraints nullable="true" />
+			</column>
+			
+			<column name="city" type="VARCHAR(30)">
+				<constraints nullable="true" />
+			</column>
+			
+			<column name="email" type="VARCHAR(100)">
+				<constraints nullable="true" unique="true" />
+			</column>
+			
+			
+			<column name="mobile_number" type="VARCHAR(18)">
+				<constraints nullable="false" />
+			</column>
+			
+			<column name="status" type="VARCHAR(20)"
+				defaultValue="REGISTERED">
+				<constraints nullable="false" />
+			</column>
+			<column name="country_id" type="INT">
+				<constraints nullable="true" />
+			</column>
+			<column name="registered_on" type="DATETIME">
+				<constraints nullable="false" />
+			</column>
+			<column name="mobile_otp_session" type="VARCHAR(100)">
+				<constraints nullable="true" />
+			</column>
+			<column name="mobile_otp_sent" type="boolean"
+				defaultValueBoolean="false">
+				<constraints nullable="false" />
+			</column>
+			<column name="mobile_number_verified" type="boolean"
+				defaultValueBoolean="false">
+				<constraints nullable="false" />
+			</column>
+			<column name="kyc_file_path" type="VARCHAR(100)">
+				<constraints nullable="true" />
+			</column>
+			<column name="longitude" type="DOUBLE">
+				<constraints nullable="true" />
+			</column>
+			<column name="latitude" type="DOUBLE">
+				<constraints nullable="true" />
+			</column>
+		</createTable>
+		<modifySql dbms="mysql">
+			<append value=" engine InnoDB DEFAULT CHARSET = utf8" />
+		</modifySql>
+	</changeSet>
+</databaseChangeLog>

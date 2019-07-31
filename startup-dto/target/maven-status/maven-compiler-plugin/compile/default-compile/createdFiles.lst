@@ -1,0 +1,4 @@
+com\startup\response\user\UserResponseDto.class
+com\startup\request\user\LoanRequestDto$LoanType.class
+com\startup\request\user\LoanRequestDto.class
+com\startup\request\user\UserRequestDto.class

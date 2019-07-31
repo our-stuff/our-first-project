@@ -1,0 +1,5 @@
+com\startup\rest\main\MainRunner.class
+com\startup\rest\spring\config\Config.class
+com\startup\rest\jersey\config\JerseyConfig.class
+com\startup\rest\jersey\rest\exception\mapper\MobileExceptionMapper.class
+com\startup\rest\user\UserResource.class

@@ -1,0 +1,7 @@
+com\startup\service\googlegsonutl\GsonUtils.class
+com\startup\service\user\UserServiceImpl.class
+com\startup\customexceptions\MobileException.class
+com\startup\service\mobile\Details.class
+com\startup\customexceptions\ErrorMessages.class
+com\startup\service\user\UserService.class
+com\startup\service\mobile\MobileUtil.class
